@@ -37,10 +37,10 @@ namespace AddLicenseHeader
         public static string ParseValue(string[] args, string key)
         {
             int idx = System.Array.IndexOf(args, key);
-            return (idx >= 0) && (args.Length > idx + 1) && (args[idx + 1].StartsWith("-"))
+            return (idx >= 0) && (args.Length > idx + 1) && (!args[idx + 1].StartsWith("-"))
                 ? args[idx + 1]
                 : null;
-        } 
+        }
 
         static string GetVersion()
         {
