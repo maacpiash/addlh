@@ -3,10 +3,9 @@
 > A CLI tool that adds a license header on top of each source file of a directory.
 
 [![Nuget](https://img.shields.io/nuget/v/AddLicenseHeader?logo=nuget&style=flat-square)](https://www.nuget.org/packages/AddLicenseHeader)
+[![Nuget](https://img.shields.io/nuget/dt/AddLicenseHeader?logo=nuget&style=flat-square)](https://www.nuget.org/packages/AddLicenseHeader)
 [![GitHub All Releases](https://img.shields.io/github/downloads/maacpiash/addlh/total?logo=github&style=flat-square)](https://github.com/maacpiash/addlh/releases)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/maacpiash/addlh/macOS?logo=apple&style=flat-square)](https://github.com/maacpiash/addlh/actions?query=workflow%3AmacOS)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/maacpiash/addlh/Ubuntu?logo=ubuntu&style=flat-square)](https://github.com/maacpiash/addlh/actions?query=workflow%3AUbuntu)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/maacpiash/addlh/Windows?logo=microsoft&style=flat-square)](https://github.com/maacpiash/addlh/actions?query=workflow%3AWindows)
+[![AppVeyor](https://img.shields.io/appveyor/build/maacpiash/addlh?logo=appveyor&style=flat-square)](https://ci.appveyor.com/project/maacpiash/addlh)
 [![Codecov](https://img.shields.io/codecov/c/gh/maacpiash/addlh?logo=codecov&style=flat-square)](https://codecov.io/gh/maacpiash/addlh)
 
 ## How to install
