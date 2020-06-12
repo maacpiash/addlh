@@ -24,7 +24,7 @@ namespace AddLicenseHeader
 {
     public partial class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             WriteLine($"addlh (version {GetVersion()})\n");
             
