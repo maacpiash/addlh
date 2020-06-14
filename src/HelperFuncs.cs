@@ -63,6 +63,7 @@ namespace AddLicenseHeader
         public static List<string> ConvertToComments(string[] license, string[] comm, string ind)
         {
             var lines = new List<string>();
+            if (license.Length == 0) return lines;
             if ((license.FirstOrDefault().StartsWith(comm[0].Trim()) &&
                     license.LastOrDefault().EndsWith(comm[2].Trim())) // multi-line comment
                 || license.All(s => s.StartsWith(ind.Trim()))) // each line commented individually

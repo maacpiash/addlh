@@ -50,5 +50,12 @@ namespace AddLicenseHeader.Tests
             string[] newLines = result.Split('-');
             Assert.Equal(newLines, ConvertToComments(oldLines, commenters, ind));
         }
+
+        [Fact]
+        public void CanConvertToComments_WhenLicenseFileIsEmpty()
+        {
+            var nothing = new string[] {};
+            Assert.Equal(nothing, ConvertToComments(nothing, nothing, ""));
+        }
     }
 }
