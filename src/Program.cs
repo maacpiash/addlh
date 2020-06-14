@@ -64,7 +64,7 @@ namespace AddLicenseHeader
 
             var ext = new List<string>
             {
-                ".cs", ".ts", ".js", ".py", ".c", ".java", ".cpp", ".h", ".cc"
+                ".cs", ".ts", ".js", ".tsx", ".jsx", ".py", ".c", ".java", ".cpp", ".h", ".cc"
             }; // only the languages that I know — in the order of my skill level!
 
             var srcPaths = Directory.GetFiles(srcDir, "*.*", SearchOption.AllDirectories)
