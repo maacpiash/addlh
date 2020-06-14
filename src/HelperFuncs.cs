@@ -17,6 +17,7 @@
 */
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Reflection;
 using static System.Console;
 
@@ -86,6 +87,18 @@ namespace AddLicenseHeader
             WriteLine("\naddlh Copyright (C) 2020  Mohammad Abdul Ahad Chowdhury");
             WriteLine("This program comes with ABSOLUTELY NO WARRANTY; This is free software,");
             WriteLine("and you are welcome to redistribute it under certain conditions.");
+        }
+
+        public static IEnumerable<string> OnlySrcFiles(string[] paths)
+        {
+            var extensions = new List<string>
+            {
+                ".cs", ".ts", ".js", ".tsx", ".jsx", ".py", ".c", ".java", ".cpp", ".h", ".cc"
+            }; // only the languages that I know — in the order of my skill level!
+
+            return paths
+                .Select(path => path.ToLower())
+                .Where(s => extensions.Contains(Path.GetExtension(s).ToLower()));
         }
     }
 }

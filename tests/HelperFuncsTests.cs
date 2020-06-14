@@ -15,7 +15,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-using System;
+using System.Linq;
 using Xunit;
 using static AddLicenseHeader.Program;
 
@@ -56,6 +56,18 @@ namespace AddLicenseHeader.Tests
         {
             var nothing = new string[] {};
             Assert.Equal(nothing, ConvertToComments(nothing, nothing, ""));
+        }
+
+        [Fact]
+        public void CanSelectOnlySrcFiles()
+        {
+            var paths = new string[]
+            {
+                "a.cs", "b.ts", "c.js", "d.tsx", "e.jsx", "f.py", "g.c", "h.java",
+                "i.cpp", "j.h", "k.cc", "l.txt", "m.mp4", "o.ogg", "p.png", "q.rst"
+            };
+            var files = OnlySrcFiles(paths);
+            Assert.Equal(paths.Take(11), files);
         }
     }
 }

@@ -17,7 +17,6 @@
 */
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using static System.Console;
 
 namespace AddLicenseHeader
@@ -62,13 +61,8 @@ namespace AddLicenseHeader
             WriteLine($"source-directory: {srcDir}");
             #endregion
 
-            var ext = new List<string>
-            {
-                ".cs", ".ts", ".js", ".tsx", ".jsx", ".py", ".c", ".java", ".cpp", ".h", ".cc"
-            }; // only the languages that I know — in the order of my skill level!
-
-            var srcPaths = Directory.GetFiles(srcDir, "*.*", SearchOption.AllDirectories)
-                .Where(s => ext.Contains(Path.GetExtension(s).ToLower()));
+            var files = Directory.GetFiles(srcDir, "*.*", SearchOption.AllDirectories);
+            var srcPaths = OnlySrcFiles(files);
 
             var licenseLines = File.ReadAllLines(headerFile);
             List<string> cLicenseLines, pLicenseLines, comments;
