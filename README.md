@@ -7,6 +7,7 @@
 [![GitHub All Releases](https://img.shields.io/github/downloads/maacpiash/addlh/total?logo=github&style=flat-square)](https://github.com/maacpiash/addlh/releases)
 [![AppVeyor](https://img.shields.io/appveyor/build/maacpiash/addlh?logo=appveyor&style=flat-square)](https://ci.appveyor.com/project/maacpiash/addlh)
 [![Codecov](https://img.shields.io/codecov/c/gh/maacpiash/addlh?logo=codecov&style=flat-square)](https://codecov.io/gh/maacpiash/addlh)
+[![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/maacpiash/addlh?logo=nuget&style=flat-square)](https://libraries.io/github/maacpiash/addlh)
 
 ## How to install
 
@@ -41,7 +42,7 @@ addlh -d ./tests -l ./GPL-2.txt
 This tool currently works for the following languages:
 
 - C# (.cs)
-- JavaScript, TypeScript (.js, .ts)
+- JavaScript, TypeScript (.js, .jsx, .ts, .tsx)
 - Python (.py)
 - C, C++ (.c, .cc, .cpp. .h)
 
